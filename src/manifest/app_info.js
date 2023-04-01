@@ -1,5 +1,5 @@
 module.exports = {
-  description: 'import current web page into the draft',
-  name: 'Draft',
-  short_name: 'Ext',
+  description: 'import current web page into the Reading List',
+  name: 'Reading List',
+  short_name: 'Reading List',
 }
