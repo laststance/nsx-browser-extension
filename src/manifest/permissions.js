@@ -3,7 +3,7 @@
 module.exports = [
   // "activeTab",
   // "alarms",
-  // "background",
+  'background',
   // "bookmarks",
   // "browsingData",
   // "certificateProvider",
@@ -64,7 +64,7 @@ module.exports = [
   // "topSites",
   // "tts",
   // "ttsEngine",
-  'unlimitedStorage',
+  // 'unlimitedStorage',
   // "vpnProvider",
   // "wallpaper",
   // "webNavigation",

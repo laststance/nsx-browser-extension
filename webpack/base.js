@@ -28,7 +28,7 @@ const Option = join(Source, 'option')
 const config = {
   devtool: isProd ? 'source-map' : 'cheap-source-map',
   entry: {
-    background: join(Background, 'index.ts'),
+    background: join(Background, 'index.js'),
     content: join(Content, 'index.tsx'),
     option: join(Option, 'index.tsx'),
     popup: join(Popup, 'index.tsx'),
