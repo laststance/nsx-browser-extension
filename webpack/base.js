@@ -28,7 +28,7 @@ const Option = join(Source, 'option')
 const config = {
   devtool: isProd ? 'source-map' : 'cheap-source-map',
   entry: {
-    background: join(Background, 'index.js'),
+    background: join(Background, 'index.ts'),
     content: join(Content, 'index.tsx'),
     option: join(Option, 'index.tsx'),
     popup: join(Popup, 'index.tsx'),
@@ -126,9 +126,9 @@ const config = {
         dotenv.config({
           path: join(
             Root,
-            `.env.${process.env.TARGET_ENV || process.env.NODE_ENV}`
+            `.env.${process.env.TARGET_ENV || process.env.NODE_ENV}`,
           ),
-        }).parsed
+        }).parsed,
       ),
     }),
     new CopyPlugin({

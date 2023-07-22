@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React from 'react'
 
+import { setBookmarkedIcon } from '../../lib/setBookmarkIcon'
+
 import { useGetPageInfo } from './useGetPageInfo'
 export interface PopupState {
   pageTitle: string
@@ -31,10 +33,7 @@ function App() {
         }, 2000)
       })
       .then(() => {
-        chrome.runtime.sendMessage({
-          action: 'setIcon',
-          path: '../assets/images/logo-bookmarked.png',
-        })
+        setBookmarkedIcon()
       })
   }
 
@@ -50,5 +49,4 @@ function App() {
     </main>
   )
 }
-
 export default App

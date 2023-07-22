@@ -1,7 +1,7 @@
 // https://developer.chrome.com/docs/extensions/mv2/declare_permissions/
 
 module.exports = [
-  // "activeTab",
+  'activeTab',
   // "alarms",
   'background',
   // "bookmarks",
@@ -69,5 +69,6 @@ module.exports = [
   // "wallpaper",
   // "webNavigation",
   // "webRequest",
-  // "webRequestBlocking"
+  // "webRequestBlocking",
+  'runtime',
 ]
