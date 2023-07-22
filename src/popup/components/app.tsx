@@ -38,7 +38,8 @@ function App() {
         setTimeout(() => {
           span.remove()
         }, 2000)
-
+      })
+      .then(() => {
         chrome.runtime.sendMessage({
           action: 'setIcon',
           path: '../assets/images/logo-bookmarked.png',
