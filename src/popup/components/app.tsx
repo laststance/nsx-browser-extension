@@ -1,23 +1,14 @@
 import axios from 'axios'
-import React, { useLayoutEffect, useState } from 'react'
+import React from 'react'
 
-async function getCurrentTab() {
-  const queryOptions = { active: true, lastFocusedWindow: true }
-  // `tab` will either be a `tabs.Tab` instance or `undefined`.
-  const [tab] = await chrome.tabs.query(queryOptions)
-  return tab
+import { useGetPageInfo } from './useGetPageInfo'
+export interface PopupState {
+  pageTitle: string
+  url: string
 }
 
 function App() {
-  const [state, setState] = useState({ pageTitle: '', url: '' })
-
-  useLayoutEffect(() => {
-    getCurrentTab().then((tab) =>
-      setState(() => {
-        return { pageTitle: tab.title, url: tab.url }
-      }),
-    )
-  }, [])
+  const state = useGetPageInfo()
 
   const onCheckedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.checked) return
