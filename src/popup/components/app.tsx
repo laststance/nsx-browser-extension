@@ -1,9 +1,10 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { setBookmarkedIcon } from '../../lib/setBookmarkIcon'
 
 import { useGetPageInfo } from './useGetPageInfo'
+
 export interface PopupState {
   pageTitle: string
   url: string
@@ -11,6 +12,7 @@ export interface PopupState {
 
 function App() {
   const state = useGetPageInfo()
+  const [comment, setComment] = useState('')
 
   const onCheckedHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.checked) return
@@ -27,7 +29,7 @@ function App() {
       .then(() => {
         const span = document.createElement('span')
         span.innerHTML = 'Success!'
-        document.querySelector('#result').appendChild(span)
+        document.querySelector('.result').appendChild(span)
         setTimeout(() => {
           span.remove()
         }, 2000)
@@ -39,14 +41,31 @@ function App() {
 
   return (
     <main id="app-root">
-      <div>
-        <div>{state.pageTitle.length ? state.pageTitle : ''}</div>
-      </div>
-      <section id="result"></section>
-      <div>
+      <section className="row1">
+        <div className="title">
+          {state.pageTitle.length ? state.pageTitle : ''}
+        </div>
         <input type="checkbox" onChange={onCheckedHandler} />
-      </div>
+      </section>
+      <section className="row2">
+        <textarea
+          className="comment"
+          onChange={(e) => setComment(e.target.value)}
+          defaultValue={comment}
+        />
+        <a
+          className="twitter-btn"
+          target="_blank"
+          href={`https://twitter.com/intent/tweet?url=${encodeURI(
+            state.url,
+          )}&text=${encodeURI(comment + ' / ')}`}
+        >
+          tweet
+        </a>
+        <div className="result"></div>
+      </section>
     </main>
   )
 }
+
 export default App

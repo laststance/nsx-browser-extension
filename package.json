@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "ReadlingList Browser Extension",
   "volta": {
-    "node": "16.20.1",
-    "npm": "8.1.2"
+    "node": "16.20.1"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -46,6 +45,7 @@
     "@babel/preset-env": "^7.18.6",
     "@types/chrome": "^0.0.193",
     "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "@types/webextension-polyfill": "^0.8.3",
     "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",

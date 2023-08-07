@@ -1,14 +1,45 @@
 #app-root {
   max-width: 1000px;
   min-width: 400px;
-  height: 40px;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 3fr 1fr 15px;
-  font-size: 16px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#result {
+.row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 14px;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.row2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.comment {
+  margin-right: 8px;
+}
+
+.twitter-btn {
+  background: #1A8CD8;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.result {
   color: #ea580c;
   font-size: 24px;
 }
