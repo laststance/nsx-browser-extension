@@ -30,9 +30,49 @@ function App() {
         const span = document.createElement('span')
         span.innerHTML = 'Success!'
         document.querySelector('.result').appendChild(span)
+
+        const fadeInEffect = new KeyframeEffect(
+          span,
+          [{ opacity: '0' }, { opacity: '1' }],
+          {
+            duration: 1000,
+            fill: 'forwards',
+          },
+        )
+
+        const fadeInAnimation = new Animation(fadeInEffect, document.timeline)
+        fadeInAnimation.play()
+
+        setTimeout(() => {
+          const fadeOutEffect = new KeyframeEffect(
+            span,
+            [{ opacity: '1' }, { opacity: '0' }],
+            {
+              duration: 1000,
+              fill: 'forwards',
+            },
+          )
+
+          const fadeOutAnimation = new Animation(
+            fadeOutEffect,
+            document.timeline,
+          )
+          fadeOutAnimation.play()
+
+          fadeOutAnimation.onfinish = () => {
+            span.remove()
+          }
+        }, 2000)
+      })
+      .catch((err) => {
+        const span = document.createElement('span')
+        span.innerHTML = 'Failed...'
+        document.querySelector('.result').appendChild(span)
         setTimeout(() => {
           span.remove()
         }, 2000)
+        //eslint-disable-next-line no-console
+        console.error(JSON.stringify(err))
       })
       .then(() => {
         setBookmarkedIcon()
@@ -45,13 +85,18 @@ function App() {
         <div className="title">
           {state.pageTitle.length ? state.pageTitle : ''}
         </div>
-        <input type="checkbox" onChange={onCheckedHandler} />
+        <input
+          className="checkbox"
+          type="checkbox"
+          onChange={onCheckedHandler}
+        />
       </section>
       <section className="row2">
         <textarea
           className="comment"
-          onChange={(e) => setComment(e.target.value)}
-          defaultValue={comment}
+          onBlur={(e) => setComment(e.target.value)}
+          cols={60}
+          rows={2}
         />
         <a
           className="twitter-btn"
