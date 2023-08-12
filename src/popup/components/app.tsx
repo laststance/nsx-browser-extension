@@ -48,7 +48,7 @@ function App() {
             span,
             [{ opacity: '1' }, { opacity: '0' }],
             {
-              duration: 500,
+              duration: 300,
               fill: 'forwards',
             },
           )

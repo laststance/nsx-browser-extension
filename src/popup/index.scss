@@ -31,6 +31,7 @@
 }
 
 .comment {
+  font-family : inherit;
   font-size: 18px;
   margin-right: 8px;
   resize: none;
@@ -42,13 +43,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 34px;
-  width: 200px;
+  height: 40px;
+  width: 220px;
   background: #1A8CD8;
   color: white;
   padding: 0 12px;
   text-decoration: none;
-  border-radius: 16px;
+  border-radius: 30px;
 }
 
 .result {
