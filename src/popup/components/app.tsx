@@ -35,7 +35,7 @@ function App() {
           span,
           [{ opacity: '0' }, { opacity: '1' }],
           {
-            duration: 1000,
+            duration: 0,
             fill: 'forwards',
           },
         )
@@ -48,7 +48,7 @@ function App() {
             span,
             [{ opacity: '1' }, { opacity: '0' }],
             {
-              duration: 1000,
+              duration: 500,
               fill: 'forwards',
             },
           )
@@ -103,7 +103,7 @@ function App() {
           target="_blank"
           href={`https://twitter.com/intent/tweet?url=${encodeURI(
             state.url,
-          )}&text=${encodeURI(comment + ' / ')}`}
+          )}&text=${encodeURI(comment)}`}
         >
           tweet
         </a>
