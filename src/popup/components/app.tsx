@@ -35,7 +35,7 @@ function App() {
           span,
           [{ opacity: '0' }, { opacity: '1' }],
           {
-            duration: 0,
+            duration: 100,
             fill: 'forwards',
           },
         )
@@ -48,7 +48,7 @@ function App() {
             span,
             [{ opacity: '1' }, { opacity: '0' }],
             {
-              duration: 300,
+              duration: 100,
               fill: 'forwards',
             },
           )
@@ -62,7 +62,7 @@ function App() {
           fadeOutAnimation.onfinish = () => {
             span.remove()
           }
-        }, 2000)
+        }, 1000)
       })
       .catch((err) => {
         const span = document.createElement('span')
@@ -70,7 +70,7 @@ function App() {
         document.querySelector('.result').appendChild(span)
         setTimeout(() => {
           span.remove()
-        }, 2000)
+        }, 1000)
         //eslint-disable-next-line no-console
         console.error(JSON.stringify(err))
       })
