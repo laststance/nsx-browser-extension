@@ -23,14 +23,14 @@ const Background = join(Source, 'background')
 const Content = join(Source, 'content')
 const Popup = join(Source, 'popup')
 const Lib = join(Source, 'lib')
-const Option = join(Source, 'option')
+// const Option = join(Source, 'option')
 
 const config = {
   devtool: isProd ? 'source-map' : 'cheap-source-map',
   entry: {
     background: join(Background, 'index.ts'),
-    content: join(Content, 'index.tsx'),
-    option: join(Option, 'index.tsx'),
+    content: join(Content, 'index.js'),
+    // option: join(Option, 'index.tsx'),
     popup: join(Popup, 'index.tsx'),
   },
   mode: process.env.NODE_ENV,
@@ -154,9 +154,9 @@ const config = {
     alias: {
       assets: Assets,
       background: Background,
-      content: Content,
+      // content: Content,
       lib: Lib,
-      option: Option,
+      // option: Option,
       popup: Popup,
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.png', '.svg', '.gql'],
