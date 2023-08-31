@@ -5,8 +5,5 @@ import App from './components/app'
 
 import './index.scss'
 
-const container = document.createElement('popup')
-document.body.appendChild(container)
-
-const root = createRoot(container)
+const root = createRoot(document.querySelector('div#popup'))
 root.render(<App />)

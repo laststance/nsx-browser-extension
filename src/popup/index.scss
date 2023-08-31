@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+div#popup {
+  margin: 8px;
+}
+
 #app-root {
   width: 500px;
   height: 80px;
@@ -32,7 +40,7 @@
 }
 
 .comment {
-  font-family : inherit;
+  font-family: inherit;
   font-size: 18px;
   margin-right: 8px;
   resize: none;
