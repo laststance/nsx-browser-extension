@@ -1,5 +1,7 @@
 # nsx-browser-extension
 
+> Browser Extension for https://github.com/laststance/nsx
+
 - Add page to stock
 
 ![add-page-to-stock](https://github.com/laststance/nsx-browser-extension/assets/5501268/39b69aac-66f4-4e36-b1f6-52d3fe34d114)
