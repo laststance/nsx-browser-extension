@@ -7,7 +7,7 @@ import { useGetPageInfo } from './useGetPageInfo'
 
 export interface PopupState {
   pageTitle: string
-  url: string
+  url: URLType
 }
 
 function App() {
