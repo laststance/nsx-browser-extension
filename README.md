@@ -1,3 +1,16 @@
+# nsx-browser-extension
+
+- Add page to stock
+
+![add-page-to-stock](https://github.com/laststance/nsx-browser-extension/assets/5501268/39b69aac-66f4-4e36-b1f6-52d3fe34d114)
+
+- Tweet page with comment
+
+![tweet-page-with-comment](https://github.com/laststance/nsx-browser-extension/assets/5501268/f44db365-93b6-4fe4-9d36-c0ba8dbd7d66)
+
+-------------
+> Project temleate's README.md bellow.
+
 # Browser Extension Template [![Generic badge](https://img.shields.io/twitter/follow/kdebdut?style=social)](https://twitter.com/KDebdut)
 ## w/ React Preact Typescript 
 
