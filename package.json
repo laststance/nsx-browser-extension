@@ -57,6 +57,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.0",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.45.0",
     "eslint-config-ts-prefixer": "^0.18.0",
     "eslint-import-resolver-typescript": "^3.5.5",

@@ -7,7 +7,7 @@ import { useGetPageInfo } from './useGetPageInfo'
 
 export interface PopupState {
   pageTitle: string
-  url: URLType
+  url: string
 }
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
     axios
       .post(
         process.env.NODE_ENV === 'development'
-          ? 'http://localhost:4000/api/push_stock'
-          : 'https://nsx.malloc.tokyo/api/push_stock',
+          ? process.env.DEV_API_URL
+          : process.env.PROD_API_URL,
         {
           pageTitle: state.pageTitle,
           url: state.url,

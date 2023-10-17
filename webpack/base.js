@@ -2,6 +2,7 @@ const { join } = require('path')
 
 const CopyPlugin = require('copy-webpack-plugin')
 const dotenv = require('dotenv')
+const dotenvWebpack = require('dotenv-webpack')
 const GenerateJsonFromJsPlugin = require('generate-json-from-js-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { DefinePlugin, optimize } = require('webpack')
@@ -121,6 +122,7 @@ const config = {
     path: join(__dirname, '../', 'dist'),
   },
   plugins: [
+    new dotenvWebpack(),
     new DefinePlugin({
       'process.env': JSON.stringify(
         dotenv.config({
